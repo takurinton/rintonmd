@@ -5,7 +5,7 @@ import { generate } from './generator';
 const rintonmd = (md: string) => {
   const mdList = md.split(/\r\n|\r|\n/);
   const astList = mdList.map(md => parse(md));
-  const htmlList = generate(astList).join('');
+  const htmlList = generate(astList);
   return htmlList;
 }
 

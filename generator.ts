@@ -90,5 +90,5 @@ export const generate = (astList: Token[][]) => {
       }
     }
     return generateHTML(remakeAst);
-  });
+  }).join('');
 }

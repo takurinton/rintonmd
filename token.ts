@@ -4,3 +4,11 @@ export type Token = {
   elementType: string; // HTMLElement Type (e.g. div, p, a, and more...
   content: string;    // content
 }
+
+// merged token
+export type MergedToken = {
+  id: number;
+  parent: Token | MergedToken;
+  elementType: 'merged';
+  content: string;
+}

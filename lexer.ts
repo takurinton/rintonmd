@@ -9,6 +9,8 @@ const P = 'p';
 const A = 'a';
 const TEXT = 'text';
 const STRONG = 'strong';
+const LI = 'li';
+const UL = 'ul';
 
 export const getTextElement = ({
   id,
@@ -54,3 +56,34 @@ export const getH1Element = ({
   elementType: H1,
   content,
 });
+
+export const getLiElement = ({
+  id,
+  content,
+  parent,
+}: {
+  id: number;
+  content: string;
+  parent: Token;
+}): Token => ({
+  id,
+  parent,
+  elementType: LI,
+  content,
+});
+
+export const getUlElement = ({
+  id,
+  content,
+  parent,
+}: {
+  id: number;
+  content: string;
+  parent: Token;
+}): Token => ({
+  id,
+  parent,
+  elementType: UL,
+  content,
+});
+

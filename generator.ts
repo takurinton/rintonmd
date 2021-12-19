@@ -51,6 +51,12 @@ const renderToHTML = ({
     case 'strong':
       content = `<strong class="strong">${currentToken.content}</strong>`;
       break;
+    case 'li':
+      content = `<li class="li">${currentToken.content}</li>`;
+      break;
+    case 'ul':
+      content = `<ul class="ul">${currentToken.content}</ul>`;
+      break;
     case 'merged': // マージ済み token 使ってみた
       const pos = getPos(parentToken.content);
       content = `${parentToken.content.slice(0, pos)}${currentToken.content}${parentToken.content.slice(pos)}`;
